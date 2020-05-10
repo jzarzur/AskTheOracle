@@ -10,10 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var answer: UILabel!
+    
+    @IBAction func askButton(_ sender: UIButton) {
+        
+        let respostas = ["YES", "NO", "MAYBE"]
+        
+        answer.text = respostas[0]
+        
+        print("testando botão")
+    }
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print("testing github")
 
     }
 

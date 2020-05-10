@@ -15,25 +15,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ASK THE ORACLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCJ-XM-mnV">
-                                <rect key="frame" x="89" y="205" width="236" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ASK THE ORACLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCJ-XM-mnV">
+                                <rect key="frame" x="0.0" y="204" width="414" height="54.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DO4-Wv-4Xj">
-                                <rect key="frame" x="182" y="637" width="51" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ANSWER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5H-Nc-2Ow">
+                                <rect key="frame" x="0.0" y="418.5" width="414" height="55"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="50"/>
+                                <color key="textColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DO4-Wv-4Xj">
+                                <rect key="frame" x="0.0" y="633.5" width="414" height="88.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
                                 <state key="normal" title="ASK">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="askButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ejg-wb-MQp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="T5H-Nc-2Ow" firstAttribute="top" secondItem="oCJ-XM-mnV" secondAttribute="bottom" constant="160" id="5rE-yh-y9X"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T5H-Nc-2Ow" secondAttribute="trailing" id="8an-Rw-ddT"/>
+                            <constraint firstItem="DO4-Wv-4Xj" firstAttribute="top" secondItem="T5H-Nc-2Ow" secondAttribute="bottom" constant="160" id="9TP-Cr-6pr"/>
+                            <constraint firstItem="T5H-Nc-2Ow" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EOc-X7-0jD"/>
+                            <constraint firstItem="oCJ-XM-mnV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ETJ-SR-os5"/>
+                            <constraint firstItem="oCJ-XM-mnV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="160" id="GRa-Od-wRF"/>
+                            <constraint firstItem="oCJ-XM-mnV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="J9d-EZ-Tz3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DO4-Wv-4Xj" secondAttribute="trailing" id="Tmg-SL-GAZ"/>
+                            <constraint firstItem="DO4-Wv-4Xj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="W2Z-d3-BsR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DO4-Wv-4Xj" secondAttribute="bottom" constant="140" id="edJ-u5-OJv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="answer" destination="T5H-Nc-2Ow" id="fge-3u-qdl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
